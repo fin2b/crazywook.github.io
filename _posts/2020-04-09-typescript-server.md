@@ -135,7 +135,7 @@ server, database 등 관련 설정 파일
   **A** userBefore decorator를 사용합니다.  
     multer 또한 마찬가지 입니다.
 
-자세한 내용은 https://github.com/typestack/routing-controllers
+[자세한 내용은](https://github.com/typestack/routing-controllers)
 
 ### sequelize
 - spec  
@@ -150,10 +150,10 @@ server, database 등 관련 설정 파일
     relation관계 설정이 좀 더 편리하다.
 - transaction config
   continuation local storage를 사용해서 transaction 전달 코드를 줄인다.  
-  자세한 내용은 https://sequelize.org/v5/manual/transactions.html#automatically-pass-transactions-to-all-queries
+  [자세한 내용](https://sequelize.org/v5/manual/transactions.html#automatically-pass-transactions-to-all-queries)
 - migration config
   추가적인 리서치후 구현이 필요
-sequelize-typescript에 대한 자세한 내용은 https://github.com/RobinBuschmann/sequelize-typescript#readme
+[sequelize-typescript에 대한 자세한 내용](https://github.com/RobinBuschmann/sequelize-typescript#readme)
 
 ### @hapi/joi
 joi가 deprecated되고 @hapi/joi로 이전  
@@ -161,4 +161,4 @@ scheme로 object를 검증할 수 있다.
 자세한 내용은 https://hapi.dev/module/joi/#example
 
 ## TODO
-- athorization 전략을 짜서 구현하기
+- authorization 전략을 짜서 구현하기
