@@ -116,7 +116,7 @@ server, database 등 관련 설정 파일
 - tsconfig.json
   typescript config file
 
-## 핵심 library 소개
+## 핵심 library
 ### routing-controllers
 - 사용이유  
   1. router를 class로 관리할 수 있다.

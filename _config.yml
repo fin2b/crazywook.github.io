@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dirt", "neon", "
 
 # Site Settings
 locale                   : "en-US"
-title                    : "개발블로그"
+title                    : "핀투비 개발블로그"
 title_separator          : "-"
 subtitle                 : "" # site tagline that appears below site title in masthead
 name                     : "FIN2B"
@@ -41,7 +41,7 @@ comments:
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
   utterances:
-    theme                : "github-dark" # "github-light" (default), "github-dark"
+    theme                : # "github-light" (default), "github-dark"
     issue_term           : # "pathname" (default)
   staticman:
     branch               : # "master"
@@ -94,52 +94,27 @@ analytics:
 # Site Author
 author:
   name             : "FIN2B"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "https://avatars3.githubusercontent.com/u/15672320?s=200&v=4"
   bio              : ""
-  location         : ""
-  email            :
+  location         : "Seoul, Korea"
+  email            : "support@fin2b.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: mailto:your.name@email.com
+      url: mailto:support@fin2b.com
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
+      url: "https://fin2b.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+      url: "https://github.com/fin2b"
 
 # Site Footer
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url:
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
-      # url:
-    - label: "Bitbucket"
-      icon: "fab fa-fw fa-bitbucket"
-      # url:
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url:
-
+      url: "https://github.com/fin2b"
 
 # Reading Files
 include:
