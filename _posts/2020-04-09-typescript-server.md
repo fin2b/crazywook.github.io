@@ -1,6 +1,6 @@
 ---
 title: "Typescript를 이용한 node server 만들기"
-author: 'swkim'
+author: swkim
 categories: node
 ---
 
