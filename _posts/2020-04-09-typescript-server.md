@@ -1,6 +1,5 @@
 ---
 title: "Typescript를 이용한 node server 만들기"
-date: 2020-04-07 13:00:00
 categories: server
 ---
 
@@ -53,4 +52,4 @@ categories: server
     "sinon": "^9.0.0",
     "ts-node": "^8.6.2"
   }
-  
+```  
