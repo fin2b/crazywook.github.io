@@ -23,10 +23,10 @@ vuex-module-decorators
 reflect-metadata
 @vue/composition-api
 ```
-- vue-fontawesome\
-  기존에 fontawesome을 CDN으로 가져오는데 용량이 14.54MB로\
-  사용자가 다운 받아사용하기에 상당히 많은 data traffic을 만든다.\
-  필요한 부분만 들여와 빌드하면 상당히 많은 부분을 줄일 수 있다.\
+- vue-fontawesome  
+  기존에 fontawesome을 CDN으로 가져오는데 용량이 14.54MB로  
+  사용자가 다운 받아사용하기에 상당히 많은 data traffic을 만든다.  
+  필요한 부분만 들여와 빌드하면 상당히 많은 부분을 줄일 수 있다.  
   [자세한 내용](https://github.com/FortAwesome/vue-fontawesome)
 
 - vuex-module-decorators\
