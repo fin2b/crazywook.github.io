@@ -1,8 +1,8 @@
 ---
 title: "Typescript를 이용한 vue 구조화하기"
-author: swkim
+author: Sungwook Kim
 categories: vue
-tag: typescript, vue
+tag: typescript
 ---
 ## 이전 프로젝트와 크게 다른 부분
 1. typescript 적용
@@ -30,7 +30,7 @@ reflect-metadata
   [자세한 내용](https://github.com/FortAwesome/vue-fontawesome)
 
 - vuex-module-decorators\
-  js vuex는 type적용을 하기가 매우 어렵다.\
+  js vuex는 type적용을 하기가 매우 어렵다.
   또한 action이벤트는 스트링으로 발생시켜야 해서 실수의 여지가 크다.
   vuex-module-decorators를 사용하면 vuex module를 class로 관리할 수 있다.
   action, mutation, getter등 호출시 type을 적용할 수 있다.\
