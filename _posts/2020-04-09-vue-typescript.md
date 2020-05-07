@@ -29,59 +29,59 @@ reflect-metadata
   필요한 부분만 들여와 빌드하면 상당히 많은 부분을 줄일 수 있다.  
   [자세한 내용](https://github.com/FortAwesome/vue-fontawesome)
 
-- vuex-module-decorators\
+- vuex-module-decorators<br/>
   js vuex는 type적용을 하기가 매우 어렵다.
   또한 action이벤트는 스트링으로 발생시켜야 해서 실수의 여지가 크다.
   vuex-module-decorators를 사용하면 vuex module를 class로 관리할 수 있다.
-  action, mutation, getter등 호출시 type을 적용할 수 있다.\
+  action, mutation, getter등 호출시 type을 적용할 수 있다.<br/>
   [자세한 내용](https://championswimmer.in/vuex-module-decorators/pages/overview.html)
 
 - @vue/composition-api
-  typescript 적용을 위한 library\
-  vue.extend로 type을 적용하는 것은 상당히 고통스러운 일이다.\
-  보통 vue-class-component로 type적용을 하지만\
-  composition-api의 type적용이 더 뛰어나다.\
-  예를 들어 jsx로 렌더링 할 경우 type적용을 할 수 있다.\
-  또한 Vue3.0에서 권장하는 component형식으로\
-  추후 Vue3 프로젝트를 할 경우 브릿지 역할을 할 수 있다.\
-  현재 프로젝트에서는 type적용을 위한 것이 주요 목적이며\
-  presentation component에 적용한다.\
-  [Vue2.0 Composition API](https://github.com/vuejs/composition-api)\
+  typescript 적용을 위한 library<br/>
+  vue.extend로 type을 적용하는 것은 상당히 고통스러운 일이다.<br/>
+  보통 vue-class-component로 type적용을 하지만<br/>
+  composition-api의 type적용이 더 뛰어나다.<br/>
+  예를 들어 jsx로 렌더링 할 경우 type적용을 할 수 있다.<br/>
+  또한 Vue3.0에서 권장하는 component형식으로<br/>
+  추후 Vue3 프로젝트를 할 경우 브릿지 역할을 할 수 있다.<br/>
+  현재 프로젝트에서는 type적용을 위한 것이 주요 목적이며<br/>
+  presentation component에 적용한다.<br/>
+  [Vue2.0 Composition API](https://github.com/vuejs/composition-api)<br/>
   [Vue3.0 Composition API](https://vue-composition-api-rfc.netlify.com/)
 
 - bootstrap-vue
-  bootstrap3는 jquery와 강하게 결합되어 있어서\
-  vue의 가상돔 방식과 작동박싱에 괴리감이 크다.\
-  bootstrap4부터는 jquery를 걷어냈다.\
-  npm설치시 jquery peer warning이 뜨지만 무시해도 된다.\
+  bootstrap3는 jquery와 강하게 결합되어 있어서<br/>
+  vue의 가상돔 방식과 작동박싱에 괴리감이 크다.<br/>
+  bootstrap4부터는 jquery를 걷어냈다.<br/>
+  npm설치시 jquery peer warning이 뜨지만 무시해도 된다.<br/>
   [자세한 내용](https://bootstrap-vue.js.org/docs/components/)
 
 ## container와 component
-Vue 권장 스타일은 container와 component를 폴더로 구분하지 않는다.\
+Vue 권장 스타일은 container와 component를 폴더로 구분하지 않는다.<br/>
 파일 컨벤션 권장하지만 한계가 있고 작명에 소요되는 시간을 늘릴 것으로 예상된다.
 ### Container
   1. 비지니스 로직만을 다룬다.
-  2. html을 다루지 않는다.\
+  2. html을 다루지 않는다.<br/>
     (하지만 실제로는 slot을 사용, 경우에 따라서 div태그를 생성한다.)
 ### Component
   1. composition-api를 사용한다.
-  2. 상태를 가지지 않는다.\
-    하지만 v-bind와 data는 reactive로 연결돼 있다.\
-    form같은 경우 input value를 container와 연결 시키면\
-    프로그램 복잡도가 불필요하게 늘어난다.\
-    이런 부분은 유연하게 대처할 필요가 있다.\
+  2. 상태를 가지지 않는다.<br/>
+    하지만 v-bind와 data는 reactive로 연결돼 있다.<br/>
+    form같은 경우 input value를 container와 연결 시키면<br/>
+    프로그램 복잡도가 불필요하게 늘어난다.<br/>
+    이런 부분은 유연하게 대처할 필요가 있다.<br/>
     Container와 Component의 분리 이유에 집중한다.
   
 ## event emit과 callback props pattern
 
 vue의 공식 convention은 event emit방식이다. component간의 통신을 event방식으로 처리하는 이유는 위에서 아래로 한 방향으로만 제어권이 주어지는 것을 추구하기 때문이다. 여기서 얻을 수 있는 효과는 component의 dependency를 끊어내서 재사용 성을 높일 수 있기 때문이다. 반면에 react에서는 내부 component에 넘겨줄 수 있는 props의 data type은 제한이 없다.
 그런데 vue는 $children과 $parent를 이미 제공하고 있기 때문에 단방향 통신을 프로그램 철학이라고 이야기하기 곤란하다.
-또한 event방식은 물리적으로 끊어져있는 것이지 실제로 event를 처리하는 곳에서는 종속될 수 밖에 없다. 결국 어느 관점에서 종속성을 보느냐에 따라 구현 방향이 달라진다.\
+또한 event방식은 물리적으로 끊어져있는 것이지 실제로 event를 처리하는 곳에서는 종속될 수 밖에 없다. 결국 어느 관점에서 종속성을 보느냐에 따라 구현 방향이 달라진다.<br/>
 [이에대한 비교글을 많이 찾아 볼 수 있다.](https://vuejsdevelopers.com/2018/07/30/callback-props-vs-emitting-events/)
 
 이번 프로젝트 특성에는 다음과 같은 이유로 callback props 방식이 더 어울린다고 판단한다.
 1. 비지니스 로직이 우선 되어야 한다고 생각한다면 container가 component에 요구사항을 제시할 수 있어야 한다고 생각한다.
-2. container와 component가 올바르게 통신하고 있는 지 event방식으로는 compilation에서 type check를 할 수가 없다.\
+2. container와 component가 올바르게 통신하고 있는 지 event방식으로는 compilation에서 type check를 할 수가 없다.<br/>
   template방식의 한계가 크다. jsx방식을 사용한다면 typesafety를 확보할 수 있다.
 
 ## vue style guide에 대해
@@ -96,7 +96,7 @@ container의 spec을 구조화하기 위함
 
 ## composition api에서 직접 slot rendering하기
 ### 사용이유
-- `template`에서 `slot`을 쓰려면 추가적인 root element가 필요하다.\
+- `template`에서 `slot`을 쓰려면 추가적인 root element가 필요하다.<br/>
   불필요한 element는 dom 작동을 느리게 하고 css를 깨트릴 수 있다.
   또한 tr같은 부모 종속인 element는 사용할 수 없다.
 ### 필수 참조
